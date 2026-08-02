@@ -225,13 +225,13 @@
             <a href="./pages/about.html" class="hover:text-hover-link transition-all">درباره ما</a>
           </li>
           <li>
-            <a href="#" class="hover:text-hover-link transition-all">وبلاگ</a>
+            <a href="./pages/blog.html" class="hover:text-hover-link transition-all">وبلاگ</a>
           </li>
         </ul>
       </div>
       <!-- app vip consulting  -->
       <div>
-        <a href="#" class="vip-link block py-2 px-5 mx-2 lg:mx-5 text-header-link-text bg-header-link-bg rounded-lg">مشاوره vip</a>
+        <a href="#" class="open-vip-modal vip-link block py-2 px-5 mx-2 lg:mx-5 text-header-link-text bg-header-link-bg rounded-lg">مشاوره vip</a>
       </div>
     </header>
     <!-- app header mobile -->
@@ -263,7 +263,7 @@
               <a href="./pages/about.html" class="inline-block">درباره ما</a>
             </li>
             <li>
-              <a href="#" class="inline-block">وبلاگ</a>
+              <a href="./pages/blog.html" class="inline-block">وبلاگ</a>
             </li>
           </ul>
         </div>
@@ -278,7 +278,7 @@
       <img src="./images/hedaer-logo.png" alt="logo website" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
       <!-- app vip consulting  -->
       <div class="relative z-10">
-        <a href="#" class="inline-block py-2 px-2 ml-2 text-sm text-header-link-text bg-header-link-bg rounded-lg">مشاوره vip</a>
+        <a href="#" class="open-vip-modal inline-block py-2 px-2 ml-2 text-sm text-header-link-text bg-header-link-bg rounded-lg">مشاوره vip</a>
       </div>
     </div>
     <!-- app main -->
@@ -360,7 +360,7 @@
 
               <p class="mt-3 leading-7 text-black">بهترین ملک‌های منطقه در املاک بورایش</p>
 
-              <a href="#" class="mt-4 inline-flex min-h-11 items-center justify-center rounded-xl border border-zinc-700 px-6 text-sm font-medium text-black transition hover:bg-custom-7 hover:text-custom-6">مشاهده همه آگهی‌ها</a>
+              <a href="./pages/ads.html" class="mt-4 inline-flex min-h-11 items-center justify-center rounded-xl border border-zinc-700 px-6 text-sm font-medium text-black transition hover:bg-custom-7 hover:text-custom-6">مشاهده همه آگهی‌ها</a>
             </div>
 
             <!-- categories -->
@@ -1297,7 +1297,7 @@
 
               <p class="mt-3 text-sm leading-7 text-custom-3 sm:text-base">جهت دریافت مشاوره تخصصی و حرفه‌ای کلیک کنید</p>
 
-              <a href="#" class="mt-5 inline-flex min-h-11 items-center justify-center rounded-xl bg-custom-7 px-8 py-2.5 text-sm text-white transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              <a href="#" class="open-vip-modal mt-5 inline-flex min-h-11 items-center justify-center rounded-xl bg-custom-7 px-8 py-2.5 text-sm text-white transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
                 مشاوره
                 <span dir="ltr" class="mr-1">VIP</span>
               </a>
@@ -1795,7 +1795,7 @@
             <div class="h-px min-w-8 flex-1 bg-zinc-300"></div>
 
             <!-- view all -->
-            <a href="#" class="group flex shrink-0 items-center gap-2 text-custom-3 transition-colors hover:text-blue-950 text-sm sm:text-base">
+            <a href="./pages/blog.html" class="group flex shrink-0 items-center gap-2 text-custom-3 transition-colors hover:text-blue-950 text-sm sm:text-base">
               <span>مشاهده همه</span>
 
               <!-- arrow left svg -->
@@ -2062,7 +2062,7 @@
       </section>
     </main>
     <!-- app footer -->
-    <!-- app footer section -->
+    <!-- app footer -->
     <footer class="relative mt-24 lg:mt-32">
       <div class="container relative px-4 md:px-2.5">
         <!-- cart logo and descrption -->
@@ -2128,6 +2128,24 @@
         </div>
       </div>
     </footer>
+    <!-- app vip-modal -->
+    <div id="vip-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50 px-5">
+      <div class="w-full max-w-md rounded-2xl bg-white p-6">
+        <button id="close-vip-modal" class="float-left text-zinc-500">✕</button>
+
+        <h2 class="text-xl font-bold text-blue-950 mb-5">درخواست مشاوره VIP</h2>
+
+        <form id="vip-form" class="space-y-4">
+          <input id="first-name" type="text" placeholder="نام" class="w-full rounded-lg border p-3" />
+
+          <input id="last-name" type="text" placeholder="نام خانوادگی" class="w-full rounded-lg border p-3" />
+
+          <input id="phone" type="tel" placeholder="شماره تماس" class="w-full rounded-lg border p-3" />
+
+          <button class="w-full rounded-lg bg-blue-950 py-3 text-white">ثبت درخواست</button>
+        </form>
+      </div>
+    </div>
     <!-- app script -->
     <script src="./scripts/app.js"></script>
     <!-- swiper script -->
@@ -2165,5 +2183,6 @@
         });
       });
     </script>
+    <script src="./scripts/vip-modal.js"></script>
   </body>
 </html>
